@@ -20,8 +20,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     lazy var locationManager: CLLocationManager = {
         let lm = CLLocationManager()
         lm.delegate = self
-        //Точность данных о местоположении, которые ваше приложение хочет получать. Достаточно и трех километров
-        lm.desiredAccuracy = kCLLocationAccuracyThreeKilometers
+        //Точность данных о местоположении, которые ваше приложение хочет получать. Достаточно и километра
+        lm.desiredAccuracy = kCLLocationAccuracyKilometer
         //запрашиваем у пользователя доступ к его гео позиции (info.plist обязателен)
         lm.requestWhenInUseAuthorization()
         return lm

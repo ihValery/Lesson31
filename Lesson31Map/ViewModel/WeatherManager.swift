@@ -18,12 +18,5 @@ class WeatherManager {
         self.networkDataFetcher = networkDataFetcher
     }
     
-    ///Create a link ready for sending (with: coordinate, and: key)
-    func createLinkGetWeatherData(coordinates: CLLocationCoordinate2D, completion: @escaping (WeatherData?) -> Void) {
-        let latitude = coordinates.latitude
-        let longitude = coordinates.longitude
-        let urlString = "\(Const.API.url)&appid=\(Const.API.key)&lat=\(latitude)&lon=\(longitude)"
-        
-        networkDataFetcher.fetchJSON(urlString: urlString, completionResponse: completion)
-    }
+
 }

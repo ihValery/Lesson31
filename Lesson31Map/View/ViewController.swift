@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var locationButton: UIButton!
@@ -20,10 +20,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     lazy var locationManager: CLLocationManager = {
         let lm = CLLocationManager()
         lm.delegate = self
-        //Точность данных о местоположении, которые ваше приложение хочет получать. Достаточно и трех километров
-        lm.desiredAccuracy = kCLLocationAccuracyThreeKilometers
+        //Точность данных о местоположении, которые ваше приложение хочет получать. Достаточно и километра
+        lm.desiredAccuracy = kCLLocationAccuracyKilometer
         //запрашиваем у пользователя доступ к его гео позиции (info.plist обязателен)
         lm.requestWhenInUseAuthorization()
+//        lm.startUpdatingLocation()
         return lm
     }()
     
@@ -51,5 +52,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func textFieldClicking(_ sender: UITextField) {
         guard let address = sender.text, address != "" else { return }
         viewModel.updatePlaceMark(mapView, textField, to: address)
+    }
+    
+    @IBAction func zoomUp() {
+        viewModel.zoom(mapView: mapView, true)
+    }
+    
+    @IBAction func zoomOut() {
+        viewModel.zoom(mapView: mapView, false)
+    }
+}
+
+extension ViewController: CLLocationManagerDelegate {
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        locationClicking(self)
     }
 }

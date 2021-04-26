@@ -10,7 +10,7 @@ import MapKit
 class WeatherManager {
     
     static let shared = WeatherManager()
-//    Еще не полностью понял зачем и как работает
+//    Еще не полностью понял как работает
 //    private init() {}
     
     var networkDataFetcher: NetworkDataFetcher

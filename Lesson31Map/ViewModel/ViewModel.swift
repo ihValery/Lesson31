@@ -21,6 +21,16 @@ class ViewModel {
         }
     }
     
+    func zoom(mapView: MKMapView, _ zoomin : Bool) {
+        var region = mapView.region;
+        var span = MKCoordinateSpan();
+        span.latitudeDelta = zoomin ? region.span.latitudeDelta / 2 :  region.span.latitudeDelta * 2;
+        span.longitudeDelta = zoomin ? region.span.longitudeDelta / 2 : region.span.longitudeDelta * 2;
+        region.span = span;
+        
+        mapView.setRegion(region, animated: true);
+    }
+    
     ///
     func updateTitleOnMap(_ mapView: MKMapView, _ textField: UITextField, to location: CLLocation, with title: String?) {
         textField.text = title

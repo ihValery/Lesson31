@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,10 +24,10 @@
                                 </connections>
                             </mapView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UGV-5f-Smz">
-                                <rect key="frame" x="20" y="64" width="374" height="45"/>
+                                <rect key="frame" x="10" y="64" width="394" height="45"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="BRJ-du-T10" customClass="TextFieldDesign" customModule="Lesson31Map" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="319" height="45"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="339" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="0s9-8o-Yy7"/>
                                         </constraints>
@@ -37,7 +38,7 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAc-Mk-mpJ" customClass="ButtonDesign" customModule="Lesson31Map" customModuleProvider="target">
-                                        <rect key="frame" x="329" y="0.0" width="45" height="45"/>
+                                        <rect key="frame" x="349" y="0.0" width="45" height="45"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="45" id="0LY-Xl-Hal"/>
@@ -50,13 +51,48 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="6md-Tp-0ja">
+                                <rect key="frame" x="359" y="401.5" width="45" height="93"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbs-eg-OyG" customClass="ButtonDesignPlus" customModule="Lesson31Map" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="WF9-fc-9sZ"/>
+                                            <constraint firstAttribute="height" constant="45" id="jKh-eW-zTK"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="zoomUp" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Hi-jN-zQt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="veT-gH-aZr" customClass="ButtonDesignMinus" customModule="Lesson31Map" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="48" width="45" height="45"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="hYo-eB-DR4"/>
+                                            <constraint firstAttribute="height" constant="45" id="qal-ay-Y2i"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <imageReference key="image" image="minus" catalog="system" symbolScale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="zoomOut" destination="BYZ-38-t0r" eventType="touchUpInside" id="UoM-nu-LTC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6md-Tp-0ja" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3tz-yL-CYf"/>
                             <constraint firstItem="fXZ-Bv-DuW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="D9H-XK-xl7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UGV-5f-Smz" secondAttribute="trailing" constant="20" id="Leo-Sm-meI"/>
-                            <constraint firstItem="UGV-5f-Smz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Xzz-Db-oBI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UGV-5f-Smz" secondAttribute="trailing" constant="10" id="Leo-Sm-meI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6md-Tp-0ja" secondAttribute="trailing" constant="10" id="Vjb-0y-wdj"/>
+                            <constraint firstItem="UGV-5f-Smz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Xzz-Db-oBI"/>
                             <constraint firstItem="fXZ-Bv-DuW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YmW-wv-5ph"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fXZ-Bv-DuW" secondAttribute="trailing" id="e3O-RP-gCY"/>
                             <constraint firstItem="UGV-5f-Smz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="gMB-Xb-eIy"/>
@@ -81,6 +117,8 @@
     </scenes>
     <resources>
         <image name="location.fill" catalog="system" width="128" height="121"/>
+        <image name="minus" catalog="system" width="128" height="24"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

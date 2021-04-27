@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var locationButton: UIButton!
@@ -26,6 +26,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         lm.requestWhenInUseAuthorization()
         return lm
     }()
+    
     
     //Не забываем от карты протянуть к GestureRecognizer (распознавателю жестов) Outlet collection
     @IBAction func mapClicking(_ sender: UITapGestureRecognizer) {
@@ -51,5 +52,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func textFieldClicking(_ sender: UITextField) {
         guard let address = sender.text, address != "" else { return }
         viewModel.updatePlaceMark(mapView, textField, to: address)
+    }
+    
+    @IBAction func zoomUp() {
+        viewModel.zoom(mapView: mapView, true)
+    }
+    
+    @IBAction func zoomOut() {
+        viewModel.zoom(mapView: mapView, false)
+    }
+}
+extension ViewController: CLLocationManagerDelegate {
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        locationClicking(self)
     }
 }

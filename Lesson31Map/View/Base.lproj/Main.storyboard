@@ -51,6 +51,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
+
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="6md-Tp-0ja">
                                 <rect key="frame" x="359" y="401.5" width="45" height="93"/>
                                 <subviews>
@@ -60,11 +61,23 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="45" id="WF9-fc-9sZ"/>
                                             <constraint firstAttribute="height" constant="45" id="jKh-eW-zTK"/>
+
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NaZ-ND-EzP">
+                                <rect key="frame" x="349" y="398" width="45" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGx-eM-r5p" customClass="ButtonDesign" customModule="Lesson31Map" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="QH3-wk-6SQ"/>
+                                            <constraint firstAttribute="height" constant="45" id="so1-A8-5db"/>
+
                                         </constraints>
                                         <state key="normal">
                                             <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
                                         </state>
                                         <connections>
+
                                             <action selector="zoomUp" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Hi-jN-zQt"/>
                                         </connections>
                                     </button>
@@ -74,12 +87,27 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="45" id="hYo-eB-DR4"/>
                                             <constraint firstAttribute="height" constant="45" id="qal-ay-Y2i"/>
+
+                                            <action selector="zoomUp" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rt5-SY-Hq9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Xj-QC-4JJ" customClass="ButtonDesign" customModule="Lesson31Map" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55" width="45" height="45"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="Eg8-Xh-vbc"/>
+                                            <constraint firstAttribute="height" constant="45" id="PXF-9M-Cam"/>
+
                                         </constraints>
                                         <state key="normal">
                                             <imageReference key="image" image="minus" catalog="system" symbolScale="large"/>
                                         </state>
                                         <connections>
+
                                             <action selector="zoomOut" destination="BYZ-38-t0r" eventType="touchUpInside" id="UoM-nu-LTC"/>
+
+                                            <action selector="zoomOut" destination="BYZ-38-t0r" eventType="touchUpInside" id="XDD-4u-RvW"/>
+
                                         </connections>
                                     </button>
                                 </subviews>
@@ -94,9 +122,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6md-Tp-0ja" secondAttribute="trailing" constant="10" id="Vjb-0y-wdj"/>
                             <constraint firstItem="UGV-5f-Smz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Xzz-Db-oBI"/>
                             <constraint firstItem="fXZ-Bv-DuW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YmW-wv-5ph"/>
+                            <constraint firstItem="NaZ-ND-EzP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ah0-wt-DnM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fXZ-Bv-DuW" secondAttribute="trailing" id="e3O-RP-gCY"/>
                             <constraint firstItem="UGV-5f-Smz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="gMB-Xb-eIy"/>
                             <constraint firstAttribute="bottom" secondItem="fXZ-Bv-DuW" secondAttribute="bottom" id="ujE-6H-Nl4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NaZ-ND-EzP" secondAttribute="trailing" constant="20" id="wGm-Ce-Yxq"/>
                         </constraints>
                     </view>
                     <connections>

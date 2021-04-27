@@ -45,9 +45,11 @@ class ViewController: UIViewController {
     @IBAction func locationClicking(_ sender: Any) {
         guard let currentLocation = locationManager.location else { return }
         
-        
-        currentLocation.lookUpLocationName { address in
-            self.viewModel.updateLocationOnMap(self.mapView, self.textField, to: currentLocation, with: address)
+        viewModel.generalZoom(mapView, to: locationManager)
+        viewModel.delay(delay: 0.6) { [weak self] in
+            currentLocation.lookUpLocationName { address in
+                self?.viewModel.updateLocationOnMap((self?.mapView)!, (self?.textField)!, to: currentLocation, with: address)
+            }
         }
     }
     

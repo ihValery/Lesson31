@@ -21,6 +21,7 @@ class ViewModel {
         }
     }
     
+    ///Zoom version 2.0. If there is a pin on the map, it is drawn exactly on it.
     func zoom(mapView: MKMapView, _ zoomin : Bool) {
         var region: MKCoordinateRegion = mapView.region
         
@@ -48,14 +49,16 @@ class ViewModel {
         mapView.setRegion(viewRegion, animated: true)
     }
     
-    func zoom(mapView: MKMapView, _ zoomin : Bool) {
-        var region: MKCoordinateRegion = mapView.region
-        //Если установленна annotation то zoom на нее
-        if let latitude = mapView.annotations.first?.coordinate.latitude, let longitude =  mapView.annotations.first?.coordinate.longitude {
-            region.center = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    ///General zoom over the current geo position. Used for a nice zoom.
+    func generalZoom(_ mapView: MKMapView, to locationManager: CLLocationManager) {
+        let viewRegion = MKCoordinateRegion(center: locationManager.location!.coordinate, latitudinalMeters: 600_000, longitudinalMeters: 600_000)
+        mapView.setRegion(viewRegion, animated: true)
+    }
+    
+    //Самописная отсрочка перед выполнение блока кода
+    func delay(delay: Double, closure: @escaping () -> ()) {
+        DispatchQueue.main.asyncAfter(wallDeadline: .now() + delay) {
+            closure()
         }
-        region.span.latitudeDelta = zoomin ? region.span.latitudeDelta / 2 :  region.span.latitudeDelta * 2
-        region.span.longitudeDelta = zoomin ? region.span.longitudeDelta / 2 : region.span.longitudeDelta * 2
-        mapView.setRegion(region, animated: true)
     }
 }

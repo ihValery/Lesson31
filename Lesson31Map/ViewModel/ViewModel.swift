@@ -28,8 +28,8 @@ class ViewModel {
             region.center = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         }
         
-        region.span.latitudeDelta = zoomin ? region.span.latitudeDelta / 2 : region.span.latitudeDelta * 2
-        region.span.longitudeDelta = zoomin ? region.span.longitudeDelta / 2 : region.span.longitudeDelta * 2
+        region.span.latitudeDelta = zoomin ? region.span.latitudeDelta / 3 : region.span.latitudeDelta * 5
+        region.span.longitudeDelta = zoomin ? region.span.longitudeDelta / 3 : region.span.longitudeDelta * 5
         mapView.setRegion(region, animated: true)
     }
     

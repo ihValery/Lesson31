@@ -45,6 +45,7 @@ class ViewController: UIViewController {
     @IBAction func locationClicking(_ sender: Any) {
         guard let currentLocation = locationManager.location else { return }
         
+        
         currentLocation.lookUpLocationName { address in
             self.viewModel.updateLocationOnMap(self.mapView, self.textField, to: currentLocation, with: address)
         }
@@ -61,11 +62,5 @@ class ViewController: UIViewController {
     
     @IBAction func zoomOut() {
         viewModel.zoom(mapView: mapView, false)
-    }
-}
-
-extension ViewController: CLLocationManagerDelegate {
-    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-        locationClicking(self)
     }
 }

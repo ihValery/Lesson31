@@ -22,13 +22,15 @@ class ViewModel {
     }
     
     func zoom(mapView: MKMapView, _ zoomin : Bool) {
-        var region = mapView.region;
-        var span = MKCoordinateSpan();
-        span.latitudeDelta = zoomin ? region.span.latitudeDelta / 2 :  region.span.latitudeDelta * 2;
-        span.longitudeDelta = zoomin ? region.span.longitudeDelta / 2 : region.span.longitudeDelta * 2;
-        region.span = span;
+        var region: MKCoordinateRegion = mapView.region
         
-        mapView.setRegion(region, animated: true);
+        if let latitude = mapView.annotations.first?.coordinate.latitude, let longitude = mapView.annotations.first?.coordinate.longitude {
+            region.center = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        }
+        
+        region.span.latitudeDelta = zoomin ? region.span.latitudeDelta / 2 : region.span.latitudeDelta * 2
+        region.span.longitudeDelta = zoomin ? region.span.longitudeDelta / 2 : region.span.longitudeDelta * 2
+        mapView.setRegion(region, animated: true)
     }
     
     ///

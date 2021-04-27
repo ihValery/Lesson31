@@ -24,10 +24,10 @@
                                 </connections>
                             </mapView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UGV-5f-Smz">
-                                <rect key="frame" x="10" y="64" width="394" height="45"/>
+                                <rect key="frame" x="10" y="54" width="394" height="45"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="BRJ-du-T10" customClass="TextFieldDesign" customModule="Lesson31Map" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="339" height="45"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="0s9-8o-Yy7"/>
                                         </constraints>
@@ -37,22 +37,10 @@
                                             <action selector="textFieldClicking:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="gvU-hX-wDt"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAc-Mk-mpJ" customClass="ButtonDesign" customModule="Lesson31Map" customModuleProvider="target">
-                                        <rect key="frame" x="349" y="0.0" width="45" height="45"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="45" id="0LY-Xl-Hal"/>
-                                            <constraint firstAttribute="height" constant="45" id="gAA-Ve-Pbs"/>
-                                        </constraints>
-                                        <state key="normal" image="location" catalog="system"/>
-                                        <connections>
-                                            <action selector="locationClicking:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KUb-Ce-AQu"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NaZ-ND-EzP">
-                                <rect key="frame" x="359" y="400.5" width="45" height="95"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="NaZ-ND-EzP">
+                                <rect key="frame" x="359" y="377.5" width="45" height="141"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGx-eM-r5p" customClass="ButtonDesignPlus" customModule="Lesson31Map" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
@@ -68,8 +56,20 @@
                                             <action selector="zoomUp" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Hi-jN-zQt"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAc-Mk-mpJ" customClass="ButtonDesign" customModule="Lesson31Map" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="48" width="45" height="45"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="0LY-Xl-Hal"/>
+                                            <constraint firstAttribute="height" constant="45" id="gAA-Ve-Pbs"/>
+                                        </constraints>
+                                        <state key="normal" image="location" catalog="system"/>
+                                        <connections>
+                                            <action selector="locationClicking:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KUb-Ce-AQu"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Xj-QC-4JJ" customClass="ButtonDesignMinus" customModule="Lesson31Map" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="45" height="45"/>
+                                        <rect key="frame" x="0.0" y="96" width="45" height="45"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="45" id="Eg8-Xh-vbc"/>
@@ -94,7 +94,7 @@
                             <constraint firstItem="fXZ-Bv-DuW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YmW-wv-5ph"/>
                             <constraint firstItem="NaZ-ND-EzP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ah0-wt-DnM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fXZ-Bv-DuW" secondAttribute="trailing" id="e3O-RP-gCY"/>
-                            <constraint firstItem="UGV-5f-Smz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="gMB-Xb-eIy"/>
+                            <constraint firstItem="UGV-5f-Smz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="gMB-Xb-eIy"/>
                             <constraint firstAttribute="bottom" secondItem="fXZ-Bv-DuW" secondAttribute="bottom" id="ujE-6H-Nl4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NaZ-ND-EzP" secondAttribute="trailing" constant="10" id="wGm-Ce-Yxq"/>
                         </constraints>

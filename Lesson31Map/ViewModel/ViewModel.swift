@@ -48,4 +48,17 @@ class ViewModel {
         let viewRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 3000, longitudinalMeters: 3000)
         mapView.setRegion(viewRegion, animated: true)
     }
+    
+    ///General zoom over the current geo position. Used for a nice zoom.
+    func generalZoom(_ mapView: MKMapView, to locationManager: CLLocationManager) {
+        let viewRegion = MKCoordinateRegion(center: locationManager.location!.coordinate, latitudinalMeters: 600_000, longitudinalMeters: 600_000)
+        mapView.setRegion(viewRegion, animated: true)
+    }
+    
+    //Самописная отсрочка перед выполнение блока кода
+    func delay(delay: Double, closure: @escaping () -> ()) {
+        DispatchQueue.main.asyncAfter(wallDeadline: .now() + delay) {
+            closure()
+        }
+    }
 }

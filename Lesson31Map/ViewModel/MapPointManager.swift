@@ -24,14 +24,14 @@ class MapPointManager: MapPoint {
             }
         }
     }
-    
+
     ///Create Point with a description of the weather in a given location.
     private func createPin(_ mapView: MKMapView, coordinate: CLLocationCoordinate2D, data: WeatherData) {
         let point = MKPointAnnotation()
         point.coordinate = coordinate
         if let currentWeather = CurrentWeather(weatherData: data) {
-            point.title = "Температура: \(currentWeather.tempStr)\n По ощущения:  \(currentWeather.tempFeelsLikeStr)"
-            point.subtitle = "Мин: \(currentWeather.tempMinStr) Макс: \(currentWeather.tempMaxStr)"
+            point.title = "Температура: \(currentWeather.tempStr)\nПо ощущения:  \(currentWeather.tempFeelsLikeStr)"
+            point.subtitle = "мин: \(currentWeather.tempMinStr) макс: \(currentWeather.tempMaxStr)"
         } else {
             point.title = Const.Error.dontGetData
         }

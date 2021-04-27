@@ -17,3 +17,25 @@ class ButtonDesign: UIButton {
         layer.shadowOpacity = 0.3
     }
 }
+
+class ButtonDesignPlus: UIButton {
+    override func awakeFromNib() {
+        layer.cornerRadius = 5
+        layer.shadowColor = UIColor.darkGray.cgColor
+        layer.shadowOffset = CGSize(width: 0, height: 2)
+        layer.shadowRadius = 5
+        layer.shadowOpacity = 0.3
+        layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+    }
+}
+
+class ButtonDesignMinus: UIButton {
+    override func awakeFromNib() {
+        layer.cornerRadius = 5
+        layer.shadowColor = UIColor.darkGray.cgColor
+        layer.shadowOffset = CGSize(width: 0, height: 2)
+        layer.shadowRadius = 5
+        layer.shadowOpacity = 0.3
+        layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+    }
+}

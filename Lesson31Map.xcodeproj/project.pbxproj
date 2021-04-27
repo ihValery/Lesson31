@@ -13,6 +13,7 @@
 		803D723B263414570031A36F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803D723A263414570031A36F /* Constants.swift */; };
 		803D7240263479730031A36F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803D723F263479730031A36F /* NetworkService.swift */; };
 		803D7242263480C50031A36F /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803D7241263480C50031A36F /* NetworkDataFetcher.swift */; };
+		803E83CB2637B48600CFC3BC /* LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803E83CA2637B48600CFC3BC /* LocationManagerDelegate.swift */; };
 		806DF69A2635480600D58128 /* CLLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806DF6992635480600D58128 /* CLLocation.swift */; };
 		806DF69C26355A9600D58128 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806DF69B26355A9600D58128 /* ViewModel.swift */; };
 		806DF69E26355C5B00D58128 /* MapPointManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806DF69D26355C5B00D58128 /* MapPointManager.swift */; };
@@ -33,6 +34,7 @@
 		803D723A263414570031A36F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		803D723F263479730031A36F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		803D7241263480C50031A36F /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
+		803E83CA2637B48600CFC3BC /* LocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerDelegate.swift; sourceTree = "<group>"; };
 		806DF6992635480600D58128 /* CLLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocation.swift; sourceTree = "<group>"; };
 		806DF69B26355A9600D58128 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		806DF69D26355C5B00D58128 /* MapPointManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPointManager.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				806DF6992635480600D58128 /* CLLocation.swift */,
+				803E83CA2637B48600CFC3BC /* LocationManagerDelegate.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				80E66001263340EF00C5CABB /* ViewController.swift in Sources */,
 				806DF69A2635480600D58128 /* CLLocation.swift in Sources */,
 				803D7242263480C50031A36F /* NetworkDataFetcher.swift in Sources */,
+				803E83CB2637B48600CFC3BC /* LocationManagerDelegate.swift in Sources */,
 				80E65FFD263340EF00C5CABB /* AppDelegate.swift in Sources */,
 				803D7239263412FD0031A36F /* TextField.swift in Sources */,
 				80E6601726335EC700C5CABB /* WeatherManager.swift in Sources */,

@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         return lm
     }()
     
+    
     //Не забываем от карты протянуть к GestureRecognizer (распознавателю жестов) Outlet collection
     @IBAction func mapClicking(_ sender: UITapGestureRecognizer) {
         //получаем координаты с экрана

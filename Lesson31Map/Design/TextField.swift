@@ -11,7 +11,7 @@ class TextFieldDesign: UITextField {
     override func awakeFromNib() {
         layer.shadowColor = UIColor.darkGray.cgColor
         layer.shadowOffset = CGSize(width: 0, height: 2)
-        layer.shadowRadius = 5
+        layer.shadowRadius = 2
         layer.shadowOpacity = 0.3
         layer.masksToBounds = false
         //смещение курсора

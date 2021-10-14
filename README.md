@@ -8,4 +8,6 @@
  - Подправил: (requestWhenInUseAuthorization после положительного ответа находит позицию, без повторного нажатия)
  - Добавил: (кнопки зума - zoom крутой ))) если есть булавка то на нее)
 
-<img src="https://github.com/ihValery/Lesson31/blob/main/GinHub_preview_1900.png?raw=true"></a> <img src="https://github.com/ihValery/Lesson31/blob/main/homeWork32Zoom3.gif?raw=true"></a> 
+<img src="https://github.com/ihValery/Lesson31/blob/main/GinHub_preview_1900.png?raw=true"></a> <img src="https://github.com/ihValery/Lesson31/blob/main/homeWork32Zoom3.gif?raw=true"></a>
+1
+2

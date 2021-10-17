@@ -9,5 +9,5 @@
  - Добавил: (кнопки зума - zoom крутой ))) если есть булавка то на нее)
 
 <img src="https://github.com/ihValery/Lesson31/blob/main/GinHub_preview_1900.png?raw=true"></a> <img src="https://github.com/ihValery/Lesson31/blob/main/homeWork32Zoom3.gif?raw=true"></a>
+
 Одесса город герой!
-В Одессе надо жить
